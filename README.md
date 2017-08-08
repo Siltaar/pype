@@ -19,11 +19,11 @@ $ `ls` \
 1.Maynard-TAL55-2.pdf
 
 $`ls | pype 're.search("^[^T].*(?:TAL)?.{,2}(\d(\d))-(\d).*\.pdf$", line)` \
-    `.expand("mv \g<0> TAL-201\g<2>-\g<1>-\g<2>-\g<0>\n")'` \
-mv 1._Hazem-TAL55-1.pdf TAL-2015-55-5-1._Hazem-TAL55-1.pdf \
+    `.expand("mv \g<0> TAL-201\g<2>-\g<1>-\g<3>-\g<0>\n")'` \
+mv 1._Hazem-TAL55-1.pdf TAL-2015-55-1-1._Hazem-TAL55-1.pdf \
 mv 1-Lavallee-TAL52-2-2011.pdf TAL-2012-52-2-1-Lavallee-TAL52-2-2011.pdf \
-mv 1-Marsic-TAL53-2.pdf TAL-2013-53-3-1-Marsic-TAL53-2.pdf \
-mv 1.Maynard-TAL55-2.pdf TAL-2015-55-5-1.Maynard-TAL55-2.pdf
+mv 1-Marsic-TAL53-2.pdf TAL-2013-53-2-1-Marsic-TAL53-2.pdf \
+mv 1.Maynard-TAL55-2.pdf TAL-2015-55-2-1.Maynard-TAL55-2.pdf
 
 Here you still need to copy/paste the built mv commands to actually execute them.
 
