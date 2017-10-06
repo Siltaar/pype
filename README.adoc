@@ -33,6 +33,18 @@ mv 1.Maynard-TAL55-2.pdf TAL-2015-55-2-1.Maynard-TAL55-2.pdf
 
 Here you still need to copy/paste the built mv commands to actually execute them.
 
+#### Simpler mass rename
+
+```shell
+ls *0
+sc_IMG_2572.JPG?attredirects=0  sc_IMG_2580.JPG?attredirects=0  sc_IMG_2587.JPG?attredirects=0
+
+ls *0 | pype 're.search("^((.*)\?att.*)$", line).expand("mv \g<0> \g<2>\n")'
+mv sc_IMG_2572.JPG?attredirects=0 sc_IMG_2572.JPG
+mv sc_IMG_2573.JPG?attredirects=0 sc_IMG_2573.JPG
+mv sc_IMG_2575.JPG?attredirects=0 sc_IMG_2575.JPG
+```
+
 ***
 
 To be continued…
