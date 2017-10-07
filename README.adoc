@@ -18,7 +18,7 @@ et voilà
 $ `echo "Et voilà" | htmlize` +
 Et voil\&#224;
 
-### Simple mass renaming
+### Simple mass renaming based on regexp matching
 
 ```shell
 ls *0
@@ -32,7 +32,7 @@ mv sc_IMG_2575.JPG?attredirects=0 sc_IMG_2575.JPG
 
 Note that you still need to copy/paste the built mv commands to actually execute them.
 
-### Mass rename with field re-ordering based on regexp matching
+### Mass rename with field re-ordering
 
 ```shell
 $ ls
