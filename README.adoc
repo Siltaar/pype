@@ -1,3 +1,5 @@
+:toc:
+
 ## Installation
 ### Shell alias definition
 Tested on ZSH : +
@@ -16,6 +18,20 @@ et voilà
 $ `echo "Et voilà" | htmlize` +
 Et voil\&#224;
 
+### Simple mass renaming
+
+```shell
+ls *0
+sc_IMG_2572.JPG?attredirects=0  sc_IMG_2580.JPG?attredirects=0  sc_IMG_2587.JPG?attredirects=0
+
+ls *0 | pype 're.search("^((.*)\?att.*)$", line).expand("mv \g<0> \g<2>\n")'
+mv sc_IMG_2572.JPG?attredirects=0 sc_IMG_2572.JPG
+mv sc_IMG_2573.JPG?attredirects=0 sc_IMG_2573.JPG
+mv sc_IMG_2575.JPG?attredirects=0 sc_IMG_2575.JPG
+```
+
+Note that you still need to copy/paste the built mv commands to actually execute them.
+
 ### Mass rename with field re-ordering based on regexp matching
 
 ```shell
@@ -31,20 +47,6 @@ mv 1._Hazem-TAL55-1.pdf TAL-2015-55-1-1._Hazem-TAL55-1.pdf
 mv 1-Lavallee-TAL52-2-2011.pdf TAL-2012-52-2-1-Lavallee-TAL52-2-2011.pdf
 mv 1-Marsic-TAL53-2.pdf TAL-2013-53-2-1-Marsic-TAL53-2.pdf
 mv 1.Maynard-TAL55-2.pdf TAL-2015-55-2-1.Maynard-TAL55-2.pdf
-```
-
-Here you still need to copy/paste the built mv commands to actually execute them.
-
-#### Simpler mass rename
-
-```shell
-ls *0
-sc_IMG_2572.JPG?attredirects=0  sc_IMG_2580.JPG?attredirects=0  sc_IMG_2587.JPG?attredirects=0
-
-ls *0 | pype 're.search("^((.*)\?att.*)$", line).expand("mv \g<0> \g<2>\n")'
-mv sc_IMG_2572.JPG?attredirects=0 sc_IMG_2572.JPG
-mv sc_IMG_2573.JPG?attredirects=0 sc_IMG_2573.JPG
-mv sc_IMG_2575.JPG?attredirects=0 sc_IMG_2575.JPG
 ```
 
 ***
