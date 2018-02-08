@@ -13,14 +13,14 @@ $ `echo "ET VOILÀ" | pype "line.lower()"` +
 et voilà
 
 ### HTMLize
-`alias htmlize='pype "line.encode(\"ascii\", \"xmlcharrefreplace\").decode(\"UTF-8\")"'`
+alias htmlize=`'pype "line.encode(\"ascii\", \"xmlcharrefreplace\").decode(\"UTF-8\")"'`
 
 $ `echo "Et voilà" | htmlize` +
 Et voil\&#224;
 
 ### Humanize timestamp
 
-`alias humanize_timestamp='pype "time.strftime(\"%Y-%m-%d %H:%M:%S\", time.localtime(int(line)))"'`
+alias humanize_timestamp=`'pype "time.strftime(\"%Y-%m-%d %H:%M:%S\", time.localtime(int(line)))"'`
 
 $ `humanize_timestamp <<< '1516817552'` +
 2018-01-24 19:12:32
