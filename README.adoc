@@ -3,7 +3,7 @@
 ## Installation
 ### Shell alias definition
 Tested on ZSH : +
-`alias pype='python3 -c"import re,sys,time; [print(eval(sys.argv[1])) for line in sys.stdin]"'`
+`alias pype='python3 -c "import re,sys,time; [print(eval(sys.argv[1])) for line in sys.stdin]"'`
 
 ## Examples
 
@@ -22,7 +22,7 @@ Et voil\&#224;
 
 `alias humanize_timestamp='pype "time.strftime(\"%Y-%m-%d %H:%M:%S\", time.localtime(int(line)))"'`
 
-$ humanize_timestamp <<< '1516817552'` +
+$ `humanize_timestamp <<< '1516817552'` +
 2018-01-24 19:12:32
 
 ### Simple mass renaming based on regexp matching
